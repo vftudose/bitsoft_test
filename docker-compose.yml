@@ -9,6 +9,8 @@ services:
       - 8000:8000
     volumes:
       - ./web:/app
+    depends_on:
+      - web_db
   web_db:
     image: mysql:8
     container_name: web_db

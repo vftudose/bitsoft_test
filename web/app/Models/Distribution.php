@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Distribution extends Model
 {
-    protected array $guarded = [];
+    protected $guarded = [];
 
     protected $casts = [
         'value' => 'array'
