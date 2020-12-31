@@ -12,7 +12,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 WORKDIR /app
 
-CMD bash -c "php artisan serve --host 0.0.0.0 --port 8000"
+CMD bash -c "composer install && php artisan migrate --force && php artisan serve --host 0.0.0.0 --port 8000"
 
 EXPOSE 8000
 
